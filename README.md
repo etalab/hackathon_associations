@@ -1,4 +1,4 @@
-#Hackathon assocations
+# Hackathon assocations
 
 Répertoire privé ("*chez moi*") car impossible d'avoir des repo privés avec l'orga Etalab. Je le tranfère dès qu'on a bien avancé et qu'on peut le révéler. En attendant, Soizic, Mathilde et TK ont les mêmes droits.
 
