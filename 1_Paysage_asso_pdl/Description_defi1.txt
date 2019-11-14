@@ -1,4 +1,10 @@
-Données disponibles sur data.gouv.fr
+Données disponibles sur diverses plateformes
+/!\ : pas toujours moissonnées (car pas de demande de moissonage). Du cou
 
+Pays de Loire https://data.paysdelaloire.fr --> des données sur la région, les communes de la région.
 https://www.data.gouv.fr/fr/datasets/annuaire-des-associations-en-region-des-pays-de-la-loire/
+
+49 - Maine et Loire : données de subventions depuis 2004 en LO, disponible sur https://data.maine-et-loire.fr/explore/dataset/224900019_subventions-aux-associations-du-departement-de-maine-et-loire/export/?sort=annee
+53 - Mayenne : https://www.data.gouv.fr/fr/datasets/donnees-essentielles-de-conventions-de-subvention-2018/
+
 
