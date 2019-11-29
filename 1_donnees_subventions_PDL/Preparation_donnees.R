@@ -102,6 +102,6 @@ data_dep_pdl$montant = gsub("[^0-9.]*", "", data_dep_pdl$montant)
 
 #Sauvegarde du fichier
 data_dep_pdl = subset(data_dep_pdl, !is.na(idAttribuant))
-write.csv2(data_dep_pdl, "donnees_tousDep_pdl.csv", row.names = FALSE,quote = TRUE
+write.csv2(data_dep_pdl, "donnees_tousDep_pdl.csv", fileEncoding = "UTF-8", row.names = FALSE,quote = TRUE
 )
 
