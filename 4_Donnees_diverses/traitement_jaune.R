@@ -32,6 +32,7 @@ nom2019$phase = "2019"
 ## 2020, beaucoup de retraitement
 nom2020 = read.csv2('Nomenclatures/PLF_2020_Nomenclature.csv', stringsAsFactors = F)
 nom2020$Libelle.abrege = NULL
+nom2020$code = gsub('^([0]*)', '', nom2020$code)
 
 missions2020 = subset(nom2020, Type.ligne == 'MSN', select = c('Type.Budget', 'code', 'Libelle'))
 colnames(missions2020) = c('typeBudget', 'codeMission', 'mission')
@@ -46,9 +47,13 @@ colnames(actions2020) = c('codeAction', 'action')
 actions2020$codeProgramme = gsub('([0-9]*)-([0-9]*)', '\\1', actions2020$codeAction)
 actions2020$codeAction = gsub('([0-9]*)-([0-9]*)', '\\2', actions2020$codeAction)
 
+ministeres2020 = subset(nom2020, Type.ligne == "MIN", c('code', 'Libelle'))
+colnames(ministeres2020) = c('codeMinistere', "ministere")
 
 nom2020_bis = merge(missions2020, programmes2020, by = ('codeMission'), all = TRUE)
 nom2020_bis = merge(nom2020_bis, actions2020, by = ('codeProgramme'), all = TRUE)
+nom2020_bis = merge(nom2020_bis, ministeres2020, by = ('codeMinistere'), all = TRUE)
+
 nom2020_bis$phase = 2020
 
 nomenclatures = list(nom2015, nom2016, nom2017, nom2018, nom2019, nom2020_bis)
